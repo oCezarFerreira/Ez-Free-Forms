@@ -20,7 +20,7 @@ require plugin_dir_path(__FILE__) . "controllers/ezff_controllers_runner.php";
 require plugin_dir_path(__FILE__) . "ezff_activation.php";
 require plugin_dir_path(__FILE__) . "ezff_deactivation.php";
 
-ezff_activation(plugin_dir_path(__FILE__));
-ezff_deactivation(plugin_dir_path(__FILE__));
+register_activation_hook(__FILE__, "ezff_activate_plugin");
+register_deactivation_hook(__FILE__, "ezff_deactivate_plugin");
 
 run_ezff_forms();

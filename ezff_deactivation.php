@@ -1,9 +1,6 @@
 <?php
-function ezff_deactivation(string $pluginPath)
-{
-  register_deactivation_hook($pluginPath, "ezff_deactivate_plugin");
-}
 
+#TODO: delete ezff_form table on database
 function ezff_deactivate_plugin()
 {
 }
